@@ -1,0 +1,3 @@
+FROM saltstack/centos-7-minimal
+
+COPY minion/conf/minion /etc/salt/
