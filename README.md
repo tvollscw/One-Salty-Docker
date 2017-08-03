@@ -4,22 +4,18 @@ Docker Compose file which creates a Salt master and minion(s). The Salt master a
 
 ## Start the stack
 
+Start the salt master and 1 minion.
+
 ```shell
 docker-compose up -d
 ```
 
-## Using salt
+## Registering minions
 
-List minions waiting for keys to be accepted
+When using `auto_accept: False` (default setting) every minion needs to be accepted. List minions waiting for keys to be accepted. This part can be skipped when using this repo as is.
 
 ```shell
 docker-compose exec master salt-key -L
-```
-
-Scale some extra minions
-
-```shell
-docker-compose up --scale minion=5
 ```
 
 Accept all pending keys for all minions
@@ -28,8 +24,15 @@ Accept all pending keys for all minions
 docker-compose exec master salt-key -A
 ```
 
+## Using salt
+
+Scale some extra minions
+
+```shell
+docker-compose up --scale minion=5
+```
+
 Run some commands on the minions
 
 ```shell
-docker-compose exec master salt '*' test.ping
 ```
