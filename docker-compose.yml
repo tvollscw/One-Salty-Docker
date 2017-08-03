@@ -1,12 +1,14 @@
-version: '2'
+version: '3.3'
 
 services: 
   master:
+    image: danielpalstra/saltstack:master
     build:
       context: .
       dockerfile: Dockerfile.master
     command: salt-master -l info
   minion:
+    image: danielpalstra/saltstack:minion  
     build:
       context: .
       dockerfile: Dockerfile.minion
