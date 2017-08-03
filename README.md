@@ -35,4 +35,30 @@ docker-compose up --scale minion=5
 Run some commands on the minions
 
 ```shell
+docker-compose exec master salt '*' test.ping
+```
+
+## Using salt with Rancher
+
+Scale the minion service
+
+```shell
+rancher scale minion=100
+```
+
+Run a ping
+```shell
+rancher exec master salt '*' test.ping
+```
+
+Time the ping
+
+```shell
+time rancher exec master salt '*' test.ping
+```
+
+Collatz
+
+```shell
+rancher exec master salt '*' test.collatz 1
 ```
