@@ -1,5 +1,15 @@
 # That's One Salty Docker!
 
+If you aren't using Docker-Compose, you can spin up individual Salt Masters & Minions like this:
+
+```shell
+docker run tvoll/one-salty-docker:salt-master
+```
+
+```shell
+docker run tvoll/one-salty-docker:salt-minion
+```
+
 Docker Compose file which creates a Salt master and minion(s). The Salt master auto accepts all minions. Used for testing the salt master with > 1000 minions. 
 
 ## Start the stack
