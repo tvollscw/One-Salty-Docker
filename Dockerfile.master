@@ -1,3 +1,0 @@
-FROM saltstack/centos-7-minimal
-
-COPY master/conf/master /etc/salt/
