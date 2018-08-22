@@ -1,4 +1,4 @@
-# PoC Saltstack
+# That's One Salty Docker!
 
 Docker Compose file which creates a Salt master and minion(s). The Salt master auto accepts all minions. Used for testing the salt master with > 1000 minions. 
 
