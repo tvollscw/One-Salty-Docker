@@ -62,3 +62,17 @@ Collatz
 ```shell
 rancher exec master salt '*' test.collatz 1
 ```
+
+## Instructions for Portainer
+
+Since Portainer doesn't come with an App Template for SaltStack, you can use these docker compose files in order to build the stack in seconds. 
+
+* On your Portainer dashboard, select the App Templates option on the last hand side.
+* Once inside of the App Templates section, find the option 'Add Template'
+* After the title and the description, choose the template type as 'Compose stack'
+* Name would be SaltStack, and Logo for SaltStack can be: https://saltstack.com/wp-content/uploads/2018/05/SaltStack_logo_blk__400x126.png
+* Change the Platform to Linux
+* Choose or type whatever category best describes the SaltStack
+* The Github Repo will be: https://github.com/tvollscw/One-Salty-Docker
+* The Compose File Path will be: docker-compose.yml
+* Create the template, search for it in your App Template Index, select the new SaltStack Template, then within it you will have the option to Deploy the Stack.
